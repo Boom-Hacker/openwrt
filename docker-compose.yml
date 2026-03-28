@@ -1,0 +1,10 @@
+services:
+  openwrt-dev:
+    build: .
+    container_name: openwrt_dev
+    volumes:
+      # 将当前目录映射到非 root 用户的家目录下
+      - .:/home/builder/openwrt
+    stdin_open: true # 等同于 -i
+    tty: true        # 等同于 -t
+    restart: unless-stopped
