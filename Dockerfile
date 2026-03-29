@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
     gettext git libncurses-dev libssl-dev rsync unzip zlib1g-dev \
     file wget python3 python3-pip python3-setuptools python3-pyelftools \
     libpcre3-dev swig libelf-dev quilt ecj fastjar \
-    java-propose-classpath qemu-utils time sudo micro vim ca-certificates \
+    java-propose-classpath qemu-utils time sudo micro vim ca-certificates curl \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # 3. 创建非 root 用户 (满足 OpenWrt 编译要求)
